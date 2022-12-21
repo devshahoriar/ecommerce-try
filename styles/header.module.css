@@ -1,0 +1,73 @@
+.header {
+  @apply container px-2 flex md:px-0 justify-between items-center py-4;
+}
+.appLogo {
+  @apply font-kolker text-5xl dark:text-white;
+}
+.appLogo span{
+  @apply text-main
+}
+.appMenu {
+  @apply hidden md:flex gap-5 text-lg 
+}
+.appMenu a {
+  @apply  dark:text-white hover:text-main transition-colors
+}
+.iconbutton {
+  @apply flex items-center ml-3;
+}
+.rightBar {
+  @apply text-2xl flex items-center dark:text-white;
+}
+.avater {
+  @apply h-8 w-8 object-cover object-top rounded-2xl;
+}
+
+.desktopHum {
+  @apply md:flex hidden gap-5;
+}
+
+.desktopHum button{
+  @apply hover:text-main
+}
+
+.mobileHam {
+  @apply block md:hidden hover:text-main
+}
+
+
+
+
+
+
+.mobileMenu{
+  @apply absolute right-0 top-0 md:hidden h-[100vh]  w-[100vw] flex justify-end
+}
+.mobileMenu > div{
+  @apply w-[300px] h-[100vh] bg-[#f5f5f5] dark:bg-black dark:text-white
+}
+.accountDesc{
+  @apply flex items-center flex-col border-b border-main pb-5 mx-2
+}
+.accountDesc img{
+  @apply h-[150px] w-[150px] object-cover object-top mt-10 rounded-full p-1 ring ring-main
+}
+.accountDesc h1{
+  @apply mt-3 text-2xl font-bold
+}
+.accountContr{
+  @apply flex gap-2 mt-2
+}
+
+.mobileMoodButton{
+  @apply flex items-center mt-4 gap-2 ring-main ring w-20 py-1 rounded-sm justify-center bg-white dark:text-white dark:bg-black
+}
+.closeButton{
+  @apply absolute top-3 left-4 text-xl hover:text-main
+}
+.mobileNav{
+  @apply flex flex-col items-center mt-5 text-3xl gap-6
+}
+.mobileNav a{
+  @apply hover:text-main transition-colors
+}

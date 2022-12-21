@@ -1,0 +1,44 @@
+.loginBg {
+  @apply from-[#ffffff] to-[#e49eba] bg-gradient-to-r h-[100vh] w-[100vw] flex items-center justify-center dark:from-[#222222] dark:to-[#584062]
+}
+.logInSection {
+  @apply h-[450px] w-[700px] bg-white flex;
+}
+.logInSection div {
+  @apply flex-1;
+}
+.PhotoBg {
+  @apply bg-black bg-[url('https://images.unsplash.com/photo-1513682121497-80211f36a7d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80')] bg-cover bg-center hidden md:block;
+}
+.bgDesc {
+  @apply bg-black bg-opacity-40 h-full w-full text-white pl-6 pt-24;
+}
+.bgDesc h1 {
+  @apply text-6xl font-bold;
+}
+.bgDesc p {
+  @apply text-sm mt-7 opacity-90;
+}
+
+.bgDesc button {
+  @apply px-7 py-2 font-bold mt-8 bg-white text-black hover:bg-main hover:text-white transition-colors;
+}
+
+.fromSide {
+  @apply flex items-center dark:bg-black dark:bg-opacity-90;
+}
+.fromSide form {
+  @apply mx-6;
+}
+.fromSide input {
+  @apply border-b-[1px] border-black even:mt-4 w-full text-lg focus:outline-none pb-2 dark:border-main dark:bg-black dark:text-white dark:bg-opacity-40;
+}
+.fromSide button {
+  @apply mt-6 px-5 py-2 bg-main font-bold text-white hover:bg-white hover:text-black transition-colors hover:ring-1 ring-black even:ml-2 even:bg-white even:text-main even:ring-main even:ring-1 even:hover:text-black;
+}
+.fromSide p {
+  @apply text-sm mt-2 opacity-90 font-light text-red-600;
+}
+.mobileReg {
+  @apply ml-2 md:hidden;
+}

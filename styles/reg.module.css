@@ -1,0 +1,47 @@
+.regBg {
+  @apply h-[100vh] w-[100vw] bg-gradient-to-r from-[#9edae4]  to-[#ffffff] flex justify-center items-center dark:from-[#405d62] dark:to-[#0a0a0a]
+}
+.regSection {
+  @apply h-[450px] w-[700px] bg-white flex dark:bg-black dark:bg-opacity-30
+}
+.regSection div{
+  @apply flex-1
+}
+.regfrom{
+  @apply flex items-center
+}
+
+.regfrom form {
+  @apply mx-6;
+}
+
+.regfrom input {
+  @apply border-b-[1px] border-black first:mt-0 mt-4 w-full text-lg focus:outline-none pb-2 dark:border-b-main dark:bg-black dark:bg-opacity-5 dark:text-white
+}
+.regfrom button {
+  @apply mt-6 px-5 py-2 bg-main font-bold text-white hover:bg-white hover:text-black transition-colors hover:ring-1 ring-black 
+}
+.regfrom p{
+  @apply text-sm mt-2 opacity-90 font-light text-red-600
+}
+
+.bgImage {
+  @apply bg-black bg-[url('https://images.unsplash.com/photo-1537511446984-935f663eb1f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')] bg-cover bg-center hidden md:block;
+}
+.regDesc {
+  @apply bg-black bg-opacity-40 h-full w-full text-white pl-6 pt-24;
+}
+
+.regDesc h1 {
+  @apply text-6xl font-bold 
+}
+.regDesc p {
+  @apply text-sm mt-7 opacity-90;
+}
+
+.regDesc button {
+  @apply px-7 py-2 font-bold mt-8 bg-white text-black hover:bg-main hover:text-white transition-colors;
+}
+.regMobil{
+  @apply ml-2 md:hidden
+}

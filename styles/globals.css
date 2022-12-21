@@ -1,26 +1,65 @@
-html,
-body {
-  padding: 0;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button {
+  @apply cursor-pointer transition-colors !duration-300;
+}
+
+img {
+  @apply dark:opacity-80;
+}
+.catM .Collapsible > span {
+  @apply block my-2 py-3 pl-2 bg-blue-100 w-full dark:bg-[#191b32] text-lg;
+}
+.catM .Collapsible__contentInner {
+  @apply flex flex-col ml-5;
+}
+.catM .Collapsible__contentInner button {
+  @apply text-left my-1;
+}
+.myP .pagenate {
+  @apply !w-6 !rounded-none bg-blue-400 dark:bg-darkC;
+}
+.myP .swiper-pagination {
+  @apply lg:!w-fit  lg:ml-5 !w-full ml-0;
+}
+.myP .swiper-pagination-bullet-active {
+  @apply bg-main;
+}
+.bottonNav h1 {
+  @apply mb-2 sm:text-4xl md:text-2xl;
+}
+.bottonNav a {
+  @apply text-sm opacity-80 hover:opacity-100 sm:text-xl md:text-sm;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
 }
-
-* {
-  box-sizing: border-box;
+.disableBtn{
+  @apply opacity-50 pointer-events-none
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.pSlider .swiper-pagination-bullet{
+  @apply h-2 w-4 rounded-sm dark:bg-darkC bg-blue-100
+}
+.pSlider .swiper-pagination-bullet .swiper-pagination-bullet-active{
+  @apply bg-main dark:bg-main
+}
+.pSlider .iiz{
+  height: 450px;
+  width: 100%;
+}
+.pSlider .iiz div{
+  width: 100%;
+}
+.pSlider .iiz div img{
+  @apply object-cover w-full
 }
