@@ -65,7 +65,7 @@ const Header = () => {
             Home
           </Link>
           <a href="#" className="dark:hover:text-main">
-            AboutShuvo
+            About
           </a>
           <Link href="/p" className="dark:hover:text-main">
             Product
