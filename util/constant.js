@@ -1,4 +1,4 @@
-export const serverUrl = 'http://localhost:1337'
+export const serverUrl ='https://strapi-ecommerce-production-98d1.up.railway.app'
 
 
 
