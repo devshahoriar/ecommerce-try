@@ -10,6 +10,8 @@ import { remove_all } from '../redux/feters/cart'
 import user from '../redux/feters/user'
 import { serverUrl } from '../util/constant'
 
+import isAuth from '../util/isAuth'
+
 const checkout = () => {
   const router = useRouter()
   const cart = useSelector((s) => s.cart)
@@ -95,6 +97,21 @@ const checkout = () => {
       </div>
     </>
   )
+}
+
+export const getServerSideProps = async (ctx) => {
+  if (!isAuth(ctx)) {
+    return {
+      redirect: {
+        destination: '/login',
+        permanent: true,
+      },
+    }
+  }
+
+  return {
+    props: {},
+  }
 }
 
 export default checkout

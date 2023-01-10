@@ -18,6 +18,7 @@ import axios from 'axios'
 import { serverUrl } from '../../util/constant'
 import { useDispatch, useSelector } from 'react-redux'
 import { add } from '../../redux/feters/cart'
+import Head from 'next/head'
 
 const Review = () => {
   return (
@@ -63,6 +64,9 @@ const id = ({ product: { attributes } }) => {
   return (
     <>
       <Header />
+      <Head>
+        <title>{"Our Shop/"+name+ ' price:' + price}</title>
+      </Head>
       <div className="container">
         <div className="lg:flex">
           <div className="m-2 pSlider lg:flex-1 lg:w-[60%] block lg:mt-6">

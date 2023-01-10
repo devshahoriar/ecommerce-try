@@ -9,6 +9,7 @@ import { logOut } from '../redux/feters/user'
 import { serverUrl } from '../util/constant'
 
 import { deleteCookie } from 'cookies-next'
+import isAuth from '../util/isAuth'
 
 const Prod = ({ p }) => {
   const { name, qun, price, img, slug } = p
@@ -113,12 +114,29 @@ const profile = () => {
               ) : (
                 orders.data.map((o, i) => <OrderProdSeg key={i} order={o} />)
               )}
+              {orders?.data  && <h1>No Order! Go make order.</h1>}
             </div>
           </div>
         </div>
       </div>
     </>
   )
+}
+
+
+export const getServerSideProps = async (ctx) => {
+  if (!isAuth(ctx)) {
+    return {
+      redirect: {
+        destination: '/login',
+        permanent: true,
+      },
+    }
+  }
+
+  return {
+    props: {},
+  }
 }
 
 export default profile

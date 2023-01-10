@@ -54,7 +54,10 @@ const Header = () => {
       <header className={style.header}>
         <div className={style.appLogo}>
           <h1 className="applogoA">
+            <Link href='/'>
+            
             Our <span>Shop</span>
+            </Link>
           </h1>
         </div>
         <div className={style.appMenu}>

@@ -13,7 +13,7 @@ const cart = () => {
       <div className="flex flex-col items-center">
         <div className="w-full md:w-[720px]">
           {cart?.length === 0 ? (
-            <h1 className="text-center">No Product In Cart</h1>
+            <h1 className="text-center mt-3">No Product In Cart</h1>
           ) : (
             cart?.map((_, i) => (
               <CartProduct

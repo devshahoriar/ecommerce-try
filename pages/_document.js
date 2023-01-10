@@ -10,7 +10,7 @@ export default function Document() {
         />
         <link href="https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap" rel="stylesheet"/> 
       </Head>
-      <body className='font-poppins relative overflow-x-hidden dark:bg-zinc-900 dark:text-white transition-colors duration-500'>
+      <body className='font-poppins relative overflow-x-hidden dark:bg-zinc-900 dark:text-white transition-colors duration-1000'>
         <Main />
         <NextScript />
       </body>

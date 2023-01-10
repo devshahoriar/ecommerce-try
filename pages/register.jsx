@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useRouter } from 'next/router'
 import { useState } from 'react'
+import { useRegisterMutation } from '../redux/api/auth'
 import style from '../styles/reg.module.css'
 import isAuth from '../util/isAuth'
 const register = () => {
@@ -8,20 +9,22 @@ const register = () => {
   const [email, setEmail] = useState()
   const [pass, setPass] = useState()
   const router = useRouter()
+  const [register, { isError, error, isLoading, isSuccess }] =
+    useRegisterMutation()
 
   const _hendelRegister = (e) => {
     e.preventDefault()
-    console.log(name, email, pass)
+    register({
+      username: name,
+      email: email,
+      password: pass,
+    })
   }
   return (
     <div className={style.regBg}>
       <section className={style.regSection}>
         <div className={style.regfrom}>
-          <form
-            action=""
-            className=""
-            onSubmit={_hendelRegister}
-          >
+          <form action="" className="" onSubmit={_hendelRegister}>
             <input
               type="text"
               placeholder="Name"
@@ -41,10 +44,14 @@ const register = () => {
             <button
               onClick={() => router.push('/login')}
               className={style.regMobil}
+              disabled={isLoading}
             >
               Login
             </button>
-            <p>This is error!</p>
+            {isError && <p>This is error!</p>}
+            {isSuccess && (
+              <h1 className="mt-2">Register done. Now you can login.</h1>
+            )}
           </form>
         </div>
         <div className={style.bgImage}>
