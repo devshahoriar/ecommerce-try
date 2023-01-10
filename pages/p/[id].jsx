@@ -65,7 +65,7 @@ const id = ({ product: { attributes } }) => {
     <>
       <Header />
       <Head>
-        <title>{"Our Shop/"+name+ ' price:' + price}</title>
+        <title>{'Our Shop/' + name + ' price:' + price}</title>
       </Head>
       <div className="container">
         <div className="lg:flex">
@@ -170,9 +170,7 @@ export async function getServerSideProps({ query }) {
 
   const { data } = await axios({
     method: 'get',
-    url:
-      'http://localhost:1337/api/products?populate=*&filters[slug][$eq]=' +
-      slug,
+    url: serverUrl + '/api/products?populate=*&filters[slug][$eq]=' + slug,
   })
   if (data?.data.length !== 1) {
     return {
